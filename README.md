@@ -5,7 +5,9 @@ Search books from Goodreads by title
 
 In the project directory, you can run:
 
-### `npm run start` 
+#### `npm run start` 
+
+## Notes
 
 - Used nodemon so no need to restart the server for every changes
 - Used React Router and Servr Side Rendering 
