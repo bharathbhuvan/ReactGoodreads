@@ -15,7 +15,8 @@ export default class SearchBox extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    testform.submit();
+    if (this.state.value && this.state.value.length > 2) testform.submit();
+    else alert("please enter valid title");
   }
   render() {
     return (
@@ -23,6 +24,7 @@ export default class SearchBox extends Component {
         name="testform"
         action={`/book/${this.state.value}`}
         onSubmit={this.handleSubmit}
+        required
       >
         <label>
           Name:
@@ -30,6 +32,7 @@ export default class SearchBox extends Component {
             type="text"
             value={this.state.value}
             onChange={this.handleChange}
+            required
           />
         </label>
         <input type="submit" value="Submit" />

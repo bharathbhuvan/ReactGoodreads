@@ -540,7 +540,7 @@ var SearchBox = function (_Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       event.preventDefault();
-      testform.submit();
+      if (this.state.value && this.state.value.length > 2) testform.submit();else alert("please enter valid title");
     }
   }, {
     key: "render",
@@ -550,7 +550,8 @@ var SearchBox = function (_Component) {
         {
           name: "testform",
           action: "/book/" + this.state.value,
-          onSubmit: this.handleSubmit
+          onSubmit: this.handleSubmit,
+          required: true
         },
         _react2.default.createElement(
           "label",
@@ -559,7 +560,8 @@ var SearchBox = function (_Component) {
           _react2.default.createElement("input", {
             type: "text",
             value: this.state.value,
-            onChange: this.handleChange
+            onChange: this.handleChange,
+            required: true
           })
         ),
         _react2.default.createElement("input", { type: "submit", value: "Submit" })
