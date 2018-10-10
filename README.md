@@ -1,2 +1,2 @@
 # ReactGoodreads
-search books from Goodreads by title
+Search books from Goodreads by title
