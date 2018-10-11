@@ -319,11 +319,7 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
-  return _react2.default.createElement(
-    "div",
-    null,
-    "Search books by title"
-  );
+  return _react2.default.createElement("div", null);
 }
 
 /***/ }),
@@ -426,20 +422,57 @@ var Grid = function (_Component) {
       }
 
       return _react2.default.createElement(
-        "ul",
-        { style: { display: "flex", flexWrap: "wrap" } },
+        "div",
+        { style: { display: "block" } },
         repos.map(function (_ref) {
           var imageUrl = _ref.imageUrl,
               bookId = _ref.bookId,
               bookUrl = _ref.bookUrl,
-              title = _ref.title;
+              title = _ref.title,
+              author = _ref.author,
+              avgRating = _ref.avgRating;
           return _react2.default.createElement(
-            "li",
-            { key: bookId, style: { margin: 30 } },
+            "div",
+            { key: bookId, style: { margin: 30, display: "table" } },
             _react2.default.createElement(
               "a",
-              { href: "https://www.goodreads.com" + bookUrl },
-              title
+              {
+                href: "https://www.goodreads.com" + bookUrl,
+                target: "_blank",
+                title: title
+              },
+              _react2.default.createElement("img", { src: imageUrl, title: title })
+            ),
+            _react2.default.createElement(
+              "span",
+              {
+                style: {
+                  display: "table-cell",
+                  verticalAlign: "middle",
+                  paddingLeft: 10
+                }
+              },
+              _react2.default.createElement(
+                "a",
+                {
+                  href: "https://www.goodreads.com" + bookUrl,
+                  style: { color: "#333333", textDecoration: "none" },
+                  target: "_blank",
+                  title: title
+                },
+                title
+              ),
+              _react2.default.createElement(
+                "span",
+                { style: { fontStyle: "italic", display: "block" } },
+                author.name
+              ),
+              _react2.default.createElement(
+                "span",
+                { style: { color: "#999", fontSize: 10 } },
+                avgRating,
+                " avg rating"
+              )
             )
           );
         })
@@ -551,7 +584,9 @@ var SearchBox = function (_Component) {
       return _react2.default.createElement(
         "form",
         {
+          style: { display: "flex", flexWrap: "wrap" },
           name: "testform",
+          method: "get",
           action: "/book/" + this.state.value,
           onSubmit: this.handleSubmit,
           required: true
@@ -559,17 +594,40 @@ var SearchBox = function (_Component) {
         _react2.default.createElement(
           "label",
           null,
-          "Name:",
           _react2.default.createElement("input", {
+            style: {
+              width: 250,
+              height: 30,
+              borderRadius: 50,
+              border: "1px solid #382110",
+              marginLeft: 10,
+              paddingLeft: 20,
+              fontSize: 15
+            },
             type: "text",
             value: this.state.value,
             onChange: this.handleChange,
             required: true,
             pattern: ".{3,}",
-            title: "3 characters minimum"
+            title: "3 characters minimum",
+            placeholder: "Search books"
           })
         ),
-        _react2.default.createElement("input", { type: "submit", value: "Submit" })
+        _react2.default.createElement("input", {
+          type: "submit",
+          value: "Submit",
+          style: {
+            width: 90,
+            height: 35,
+            border: "1px solid #382110",
+            borderRadius: 50,
+            marginLeft: 10,
+            fontSize: 15,
+            backgroundColor: "#382110",
+            color: "#fff",
+            cursor: "pointer"
+          }
+        })
       );
     }
   }]);

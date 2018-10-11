@@ -48,13 +48,43 @@ class Grid extends Component {
     }
 
     return (
-      <ul style={{ display: "flex", flexWrap: "wrap" }}>
-        {repos.map(({ imageUrl, bookId, bookUrl, title }) => (
-          <li key={bookId} style={{ margin: 30 }}>
-            <a href={`https://www.goodreads.com${bookUrl}`}>{title}</a>
-          </li>
-        ))}
-      </ul>
+      <div style={{ display: "block" }}>
+        {repos.map(
+          ({ imageUrl, bookId, bookUrl, title, author, avgRating }) => (
+            <div key={bookId} style={{ margin: 30, display: "table" }}>
+              <a
+                href={`https://www.goodreads.com${bookUrl}`}
+                target="_blank"
+                title={title}
+              >
+                <img src={imageUrl} title={title} />
+              </a>
+              <span
+                style={{
+                  display: "table-cell",
+                  verticalAlign: "middle",
+                  paddingLeft: 10
+                }}
+              >
+                <a
+                  href={`https://www.goodreads.com${bookUrl}`}
+                  style={{ color: "#333333", textDecoration: "none" }}
+                  target="_blank"
+                  title={title}
+                >
+                  {title}
+                </a>
+                <span style={{ fontStyle: "italic", display: "block" }}>
+                  {author.name}
+                </span>
+                <span style={{ color: "#999", fontSize: 10 }}>
+                  {avgRating} avg rating
+                </span>
+              </span>
+            </div>
+          )
+        )}
+      </div>
     );
   }
 }
