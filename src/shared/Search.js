@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 export default class SearchBox extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export default class SearchBox extends Component {
   handleSubmit(event) {
     event.preventDefault();
     if (this.state.value && this.state.value.length > 2) testform.submit();
-    else alert("please enter valid title");
+    //this.props.history.push('/book/${this.state.value}'); for front-end routing if the Goodreads API can bee accessd from front end
   }
   render() {
     return (
@@ -33,6 +34,8 @@ export default class SearchBox extends Component {
             value={this.state.value}
             onChange={this.handleChange}
             required
+            pattern=".{3,}"
+            title="3 characters minimum"
           />
         </label>
         <input type="submit" value="Submit" />
@@ -40,3 +43,5 @@ export default class SearchBox extends Component {
     );
   }
 }
+
+//export default withRouter(SearchBox); for front-end routing if the Goodreads API can bee accessd from front end

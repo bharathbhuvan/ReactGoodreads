@@ -22,7 +22,14 @@ var browserConfig = {
               importLoaders: 1
             }
           },
-          "postcss-loader"
+          {
+            loader: "postcss-loader",
+            options: {
+              config: {
+                path: "postcss.config.js"
+              }
+            }
+          }
         ]
       }
     ]

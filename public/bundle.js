@@ -915,6 +915,91 @@ module.exports = ReactPropTypesSecret;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.withRouter = exports.matchPath = exports.generatePath = exports.Switch = exports.StaticRouter = exports.Router = exports.Route = exports.Redirect = exports.Prompt = exports.NavLink = exports.MemoryRouter = exports.Link = exports.HashRouter = exports.BrowserRouter = undefined;
+
+var _BrowserRouter2 = __webpack_require__(42);
+
+var _BrowserRouter3 = _interopRequireDefault(_BrowserRouter2);
+
+var _HashRouter2 = __webpack_require__(50);
+
+var _HashRouter3 = _interopRequireDefault(_HashRouter2);
+
+var _Link2 = __webpack_require__(19);
+
+var _Link3 = _interopRequireDefault(_Link2);
+
+var _MemoryRouter2 = __webpack_require__(51);
+
+var _MemoryRouter3 = _interopRequireDefault(_MemoryRouter2);
+
+var _NavLink2 = __webpack_require__(53);
+
+var _NavLink3 = _interopRequireDefault(_NavLink2);
+
+var _Prompt2 = __webpack_require__(55);
+
+var _Prompt3 = _interopRequireDefault(_Prompt2);
+
+var _Redirect2 = __webpack_require__(57);
+
+var _Redirect3 = _interopRequireDefault(_Redirect2);
+
+var _Route2 = __webpack_require__(20);
+
+var _Route3 = _interopRequireDefault(_Route2);
+
+var _Router2 = __webpack_require__(14);
+
+var _Router3 = _interopRequireDefault(_Router2);
+
+var _StaticRouter2 = __webpack_require__(59);
+
+var _StaticRouter3 = _interopRequireDefault(_StaticRouter2);
+
+var _Switch2 = __webpack_require__(61);
+
+var _Switch3 = _interopRequireDefault(_Switch2);
+
+var _generatePath2 = __webpack_require__(63);
+
+var _generatePath3 = _interopRequireDefault(_generatePath2);
+
+var _matchPath2 = __webpack_require__(64);
+
+var _matchPath3 = _interopRequireDefault(_matchPath2);
+
+var _withRouter2 = __webpack_require__(65);
+
+var _withRouter3 = _interopRequireDefault(_withRouter2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.BrowserRouter = _BrowserRouter3.default;
+exports.HashRouter = _HashRouter3.default;
+exports.Link = _Link3.default;
+exports.MemoryRouter = _MemoryRouter3.default;
+exports.NavLink = _NavLink3.default;
+exports.Prompt = _Prompt3.default;
+exports.Redirect = _Redirect3.default;
+exports.Route = _Route3.default;
+exports.Router = _Router3.default;
+exports.StaticRouter = _StaticRouter3.default;
+exports.Switch = _Switch3.default;
+exports.generatePath = _generatePath3.default;
+exports.matchPath = _matchPath3.default;
+exports.withRouter = _withRouter3.default;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _warning = __webpack_require__(9);
 
@@ -999,7 +1084,7 @@ var createTransitionManager = function createTransitionManager() {
 exports.default = createTransitionManager;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1009,7 +1094,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Router = __webpack_require__(14);
+var _Router = __webpack_require__(15);
 
 var _Router2 = _interopRequireDefault(_Router);
 
@@ -1018,7 +1103,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Router2.default; // Written in this round about way for babel-transform-imports
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1168,7 +1253,7 @@ Router.childContextTypes = {
 exports.default = Router;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1255,7 +1340,7 @@ var matchPath = function matchPath(pathname) {
 exports.default = matchPath;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1267,91 +1352,6 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(30);
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.withRouter = exports.matchPath = exports.generatePath = exports.Switch = exports.StaticRouter = exports.Router = exports.Route = exports.Redirect = exports.Prompt = exports.NavLink = exports.MemoryRouter = exports.Link = exports.HashRouter = exports.BrowserRouter = undefined;
-
-var _BrowserRouter2 = __webpack_require__(42);
-
-var _BrowserRouter3 = _interopRequireDefault(_BrowserRouter2);
-
-var _HashRouter2 = __webpack_require__(50);
-
-var _HashRouter3 = _interopRequireDefault(_HashRouter2);
-
-var _Link2 = __webpack_require__(19);
-
-var _Link3 = _interopRequireDefault(_Link2);
-
-var _MemoryRouter2 = __webpack_require__(51);
-
-var _MemoryRouter3 = _interopRequireDefault(_MemoryRouter2);
-
-var _NavLink2 = __webpack_require__(53);
-
-var _NavLink3 = _interopRequireDefault(_NavLink2);
-
-var _Prompt2 = __webpack_require__(55);
-
-var _Prompt3 = _interopRequireDefault(_Prompt2);
-
-var _Redirect2 = __webpack_require__(57);
-
-var _Redirect3 = _interopRequireDefault(_Redirect2);
-
-var _Route2 = __webpack_require__(20);
-
-var _Route3 = _interopRequireDefault(_Route2);
-
-var _Router2 = __webpack_require__(13);
-
-var _Router3 = _interopRequireDefault(_Router2);
-
-var _StaticRouter2 = __webpack_require__(59);
-
-var _StaticRouter3 = _interopRequireDefault(_StaticRouter2);
-
-var _Switch2 = __webpack_require__(61);
-
-var _Switch3 = _interopRequireDefault(_Switch2);
-
-var _generatePath2 = __webpack_require__(63);
-
-var _generatePath3 = _interopRequireDefault(_generatePath2);
-
-var _matchPath2 = __webpack_require__(64);
-
-var _matchPath3 = _interopRequireDefault(_matchPath2);
-
-var _withRouter2 = __webpack_require__(65);
-
-var _withRouter3 = _interopRequireDefault(_withRouter2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.BrowserRouter = _BrowserRouter3.default;
-exports.HashRouter = _HashRouter3.default;
-exports.Link = _Link3.default;
-exports.MemoryRouter = _MemoryRouter3.default;
-exports.NavLink = _NavLink3.default;
-exports.Prompt = _Prompt3.default;
-exports.Redirect = _Redirect3.default;
-exports.Route = _Route3.default;
-exports.Router = _Router3.default;
-exports.StaticRouter = _StaticRouter3.default;
-exports.Switch = _Switch3.default;
-exports.generatePath = _generatePath3.default;
-exports.matchPath = _matchPath3.default;
-exports.withRouter = _withRouter3.default;
 
 /***/ }),
 /* 18 */
@@ -1615,7 +1615,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _matchPath = __webpack_require__(15);
+var _matchPath = __webpack_require__(16);
 
 var _matchPath2 = _interopRequireDefault(_matchPath);
 
@@ -2279,7 +2279,7 @@ var _App = __webpack_require__(35);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _reactRouterDom = __webpack_require__(17);
+var _reactRouterDom = __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4239,7 +4239,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var aa = __webpack_require__(0),
     n = __webpack_require__(6),
-    ba = __webpack_require__(16);function ca(a, b, c, d, e, f, g, h) {
+    ba = __webpack_require__(17);function ca(a, b, c, d, e, f, g, h) {
   if (!a) {
     a = void 0;if (void 0 === b) a = Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else {
       var k = [c, d, e, f, g, h],
@@ -6818,7 +6818,7 @@ if (process.env.NODE_ENV !== "production") {
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var React=__webpack_require__(0);var _assign=__webpack_require__(6);var checkPropTypes=__webpack_require__(10);var schedule=__webpack_require__(16);var tracing=__webpack_require__(32);/**
+ */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var React=__webpack_require__(0);var _assign=__webpack_require__(6);var checkPropTypes=__webpack_require__(10);var schedule=__webpack_require__(17);var tracing=__webpack_require__(32);/**
  * Use invariant() to assert state which your program assumes to be true.
  *
  * Provide sprintf-style format (only %s is supported) and arguments
@@ -10729,7 +10729,7 @@ var _routes = __webpack_require__(36);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _reactRouterDom = __webpack_require__(17);
+var _reactRouterDom = __webpack_require__(12);
 
 var _Search = __webpack_require__(68);
 
@@ -11573,7 +11573,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _history = __webpack_require__(5);
 
-var _Router = __webpack_require__(13);
+var _Router = __webpack_require__(14);
 
 var _Router2 = _interopRequireDefault(_Router);
 
@@ -12405,7 +12405,7 @@ var _LocationUtils = __webpack_require__(8);
 
 var _PathUtils = __webpack_require__(7);
 
-var _createTransitionManager = __webpack_require__(12);
+var _createTransitionManager = __webpack_require__(13);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -12729,7 +12729,7 @@ var _LocationUtils = __webpack_require__(8);
 
 var _PathUtils = __webpack_require__(7);
 
-var _createTransitionManager = __webpack_require__(12);
+var _createTransitionManager = __webpack_require__(13);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -13066,7 +13066,7 @@ var _PathUtils = __webpack_require__(7);
 
 var _LocationUtils = __webpack_require__(8);
 
-var _createTransitionManager = __webpack_require__(12);
+var _createTransitionManager = __webpack_require__(13);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -13263,7 +13263,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _history = __webpack_require__(5);
 
-var _Router = __webpack_require__(13);
+var _Router = __webpack_require__(14);
 
 var _Router2 = _interopRequireDefault(_Router);
 
@@ -13372,7 +13372,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _history = __webpack_require__(5);
 
-var _Router = __webpack_require__(14);
+var _Router = __webpack_require__(15);
 
 var _Router2 = _interopRequireDefault(_Router);
 
@@ -13929,7 +13929,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _history = __webpack_require__(5);
 
-var _Router = __webpack_require__(14);
+var _Router = __webpack_require__(15);
 
 var _Router2 = _interopRequireDefault(_Router);
 
@@ -14150,7 +14150,7 @@ var _invariant = __webpack_require__(3);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _matchPath = __webpack_require__(15);
+var _matchPath = __webpack_require__(16);
 
 var _matchPath2 = _interopRequireDefault(_matchPath);
 
@@ -14269,7 +14269,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _matchPath = __webpack_require__(15);
+var _matchPath = __webpack_require__(16);
 
 var _matchPath2 = _interopRequireDefault(_matchPath);
 
@@ -14463,6 +14463,8 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(12);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -14495,7 +14497,8 @@ var SearchBox = function (_Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       event.preventDefault();
-      if (this.state.value && this.state.value.length > 2) testform.submit();else alert("please enter valid title");
+      if (this.state.value && this.state.value.length > 2) testform.submit();
+      //this.props.history.push('/book/${this.state.value}'); for front-end routing if the Goodreads API can bee accessd from front end
     }
   }, {
     key: "render",
@@ -14516,7 +14519,9 @@ var SearchBox = function (_Component) {
             type: "text",
             value: this.state.value,
             onChange: this.handleChange,
-            required: true
+            required: true,
+            pattern: ".{3,}",
+            title: "3 characters minimum"
           })
         ),
         _react2.default.createElement("input", { type: "submit", value: "Submit" })
@@ -14526,6 +14531,9 @@ var SearchBox = function (_Component) {
 
   return SearchBox;
 }(_react.Component);
+
+//export default withRouter(SearchBox); for front-end routing if the Goodreads API can bee accessd from front end
+
 
 exports.default = SearchBox;
 
